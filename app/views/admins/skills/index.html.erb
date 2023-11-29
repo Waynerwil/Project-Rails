@@ -1,0 +1,17 @@
+
+<header>
+    <nav>
+        <ul class="navbar">
+            <li class="options">
+                <%= link_to "Logo", root_path %>
+            </li>
+
+            <li class="options">
+                <%= link_to "Home", root_path %>
+            </li>
+        </ul>
+    </nav>
+<h1>Hola</h1>
+<%= button_to "logout", destroy_user_session_path, method: :delete %> 
+
+</header>

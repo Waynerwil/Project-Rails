@@ -1,14 +1,37 @@
-<h1>Welcome, Users</h1>
-<p>Find me in app/views/about/about.html.erb</p>
+<h1 class="welcome">Welcome to ChaguiDevOps</h1>
+<h2>The Importance of Choosing the Right Software Development Company</h2>
+
+<div class="info">
+    <div class="item">👉 Technology as a Driver of Business Innovation
+    Modern businesses depend on software solutions to automate processes, manage data, engage with customers, and stay ahead in their respective industries. Choosing the right software development company results in solutions that drive innovation and growth.</div>
+    <div class="item">👉 Investments in Long-Term Success:
+    Choosing a software development company is an investment in the long-term success of your company. By considering experience, specialization, quality, communication and support, you are ensuring that your software investment is not only an effective solution, but a strategic asset for your business.</div>
+    <div class="item">👉 Quality as a Priority:
+    Software quality is a crucial factor. Make sure the company has a solid quality assurance and testing process. Investment in testing and quality assurance ensures that solutions are reliable, secure, and error-free.</div>
+    <div class="item">👉 Compliance with Deadlines and Budget:
+    Compliance with deadlines and budget is vital. A trustworthy company sets clear expectations and adheres to agreed-upon deadlines. This allows you to plan and execute your projects efficiently.</div>
+    <div class="item">👉 Evaluation of Experience and Expertise:
+    When you are looking for a software development company, experience and expertise are crucial. Consider the company's years of experience, its track record of successful projects, and its specialization in specific technologies. The experience demonstrates the company's ability to solve challenges and deliver quality solutions.</div>
+    <div class="item">👉 Analyzing the Specialization:
+    Every software development company has its own area of specialization. Some excel in mobile applications, others in web development, while some focus on emerging technologies such as artificial intelligence. Identify your needs and look for a company that has experience in your area of interest.</div>
+    <div class="item">👉 Collaboration and Effective Communication:
+    Effective communication is essential to the success of any software development project. Look for a company that offers open, fluid communication and is willing to work closely with you to understand your needs and goals.</div>
+    <div class="item">👉 Ongoing Support and Updates:
+    Software development does not end with the delivery of the final product. Make sure the company is willing to provide ongoing support, updates and improvements as your needs evolve.</div>
+</div>
+<h2>💡Investing in software for your company is a strategic action, a lasting investment, and with positive results for the growth and continued success of your company in the digital environment 💡</h2>
+   
+    <%# <% <p>You´re not signed in!</p> %>
+    <%# <% <p>You´re signed in!</p> %>
+    <%= link_to "SING IN", new_user_session_path %>
+    <%= link_to "COLLABORATORS", '/skills' %>
 
 
-<% if current_user %>
-    <p>You´re signed in!</p>
-    <p>Welcome back <%= current_user.email %></p>
-<%= button_to "logout", destroy_user_session_path, method: :delete %>
-<% else %>
 
-    <p>You´re not signed in!</p>
+<%# <% if current_user %>
+    <%# <p>Welcome back <%= current_user.email %>
+<%# <%= button_to "logout", destroy_user_session_path, method: :delete %> 
+<%# <% else %> 
+
     <%# <%= link_to "SING UP",  new_user_registration_path%> 
-    <%= link_to "SING IN", new_user_session_path%>
-<% end %>
+<%# <% end %> 
