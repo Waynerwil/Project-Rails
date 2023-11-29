@@ -8,6 +8,16 @@
 
 Rails.application.routes.draw do
   root to: 'about#about'
+
+  get '/home', to: 'home#index'
+
+  get '/skills', to: 'skills#index'
+
+  get '/projects', to: 'projects#index'
+
+  get '/contact', to: 'contact#index'
+
+
   devise_for :user
   get "/skills", to: "skills#index"
 

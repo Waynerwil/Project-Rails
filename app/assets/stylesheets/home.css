@@ -1,0 +1,11 @@
+.about{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+}
+
+.img{
+    display: flex;
+    width: 167px;
+    height: 150px;
+}
