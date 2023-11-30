@@ -7,22 +7,25 @@
 # end
 
 Rails.application.routes.draw do
+
+  namespace :admins do
+    
+    get '/home', to: 'home#index'
+    get "/skills", to: "skills#index"
+    get '/projects', to: 'projects#index'
+    get '/contact', to: 'contact#index'
+    
+  end
+  
   root to: 'about#about'
+  devise_for :user
 
   get '/home', to: 'home#index'
-
   get '/skills', to: 'skills#index'
-
   get '/projects', to: 'projects#index'
-
   get '/contact', to: 'contact#index'
 
 
-  devise_for :user
-  get "/skills", to: "skills#index"
-
-  namespace :admins do 
-    get "/skills", to: "skills#index"
-  end
+  # get "/skills", to: "skills#index"
 
 end

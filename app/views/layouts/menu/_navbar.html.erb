@@ -1,25 +1,56 @@
 <header>
+
     <nav>
-        <ul class="navbar">
 
-            <li class="options">
-                <%= link_to "About us", home_path %>
-            </li>
+        <% if is_admin_in %>
 
-            <li class="options">
-                <%= link_to "Skills", skills_path %>
-            </li>
+            <ul class="navbar">
 
-            <li class="options">
-                <%= link_to "Projects", projects_path %>
-            </li>
+                <li class="options">
+                    <%= link_to "About us", admins_home_path %>
+                </li>
 
-            <li class="options">
-                <%= link_to "Contact", contact_path %>
-            </li>
-            
-        </ul>
+                <li class="options">
+                    <%= link_to "Skills", admins_skills_path %>
+                </li>
 
-    </nav> <br>
+                <li class="options">
+                    <%= link_to "Projects", admins_projects_path %>
+                </li>
+
+                <li class="options">
+                    <%= link_to "Contact", admins_contact_path %>
+                </li>
+                
+            </ul>
+
+        <% else %>
+
+            <ul class="navbar">
+
+                <li class="options">
+                    <%= link_to "About us", home_path %>
+                </li>
+
+                <li class="options">
+                    <%= link_to "Skills", skills_path %>
+                </li>
+
+                <li class="options">
+                    <%= link_to "Projects", projects_path %>
+                </li>
+
+                <li class="options">
+                    <%= link_to "Contact", contact_path %>
+                </li>
+                
+            </ul>
+
+        <% end %>
+
+        
+    </nav>
+    
+    <br>
 
 </header>

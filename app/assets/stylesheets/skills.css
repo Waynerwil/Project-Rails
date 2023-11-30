@@ -1,0 +1,119 @@
+
+.parent {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+/* React JS */
+.progress {
+    height: 35px;
+    width: 100%;
+    border: 1px solid #04CCFC;
+    border-radius: 5px;
+    background-color: #e6f3fa;
+    margin-bottom: 15px;
+}
+ 
+.progress-bar {
+    height: 100%;
+    background: #04CCFC;
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 5px;
+}
+ 
+.progress-bar-text {
+    margin-left: 10px;
+    font-weight: bold;
+    color: #cce7f5;
+}
+
+/* JavaScript */
+.progress_2{
+    height: 35px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #e6f3fa;
+    margin-bottom: 15px;
+}
+ 
+.progress-bar_2 {
+    height: 100%;
+    background: #F2F904;
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 5px;
+}
+ 
+.progress-bar-text_2 {
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+/* Ruby */
+.progress_3{
+    height: 35px;
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: #e6f3fa;
+    margin-bottom: 15px;
+}
+ 
+.progress-bar_3 {
+    height: 100%;
+    background: #FC0404;
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 5px;
+}
+ 
+.progress-bar-text_3 {
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+/* MySQL */
+.progress_4{
+    height: 35px;
+    width: 100%;
+    border: 1px solid #F29111;
+    border-radius: 5px;
+    background-color: #e6f3fa;
+    margin-bottom: 15px;
+}
+ 
+.progress-bar_4 {
+    height: 100%;
+    background: #00758f;
+    display: flex;
+    align-items: center;
+    transition: width 0.25s;
+    border-radius: 5px;
+}
+ 
+.progress-bar-text_4 {
+    margin-left: 10px;
+    font-weight: bold;
+    color: black;
+}
+
+/* img */
+.hola{
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+
+img{
+    padding: 10px;
+}
