@@ -27,5 +27,13 @@ Rails.application.routes.draw do
 
 
   # get "/skills", to: "skills#index"
+  get "send" => 'send#index'
+  post "send" => 'send#create'
+
+
+  # config/routes.rb
+  Rails.application.routes.draw do
+  resources :students, only: [:show]
+  end
 
 end

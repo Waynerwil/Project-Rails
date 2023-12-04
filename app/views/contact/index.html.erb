@@ -1,109 +1,14 @@
-<h1>Contact</h1>
+<h1>Contacto</h1>
+<%= flash[:notice] %>
+<%= form_tag send_path,method: :post do %>
+<%= label_tag :name,"Nombre" %><br/>
+<%= text_field_tag :name %> <br/>
+<%= label_tag :email, "Email" %> <br/>
+<%= text_field_tag :email %> <br/>
+<%= label_tag :subject, "Asunto" %> <br/>
+<%= text_field_tag :subject %> <br/>
+<%= label_tag :content, "Contenido" %><br/>
+<%= text_area_tag :content %> <br/>
+<%= submit_tag "Enviar" %>
+<% end %>
 
-
-
-<% if contact.blank? %>
-
-<%= form_with model: @contact do |contact_form| %>
-
-        <%= contact_form.label :name %>
-        <%= contact_form.text_field :name %>
-
-        <% if @contact.errors[:name].present?%>
-        <ul class = 'error-list'>
-            <%@contact.errors[:name].each do | error_message| %>
-                <li> <%= error_message%> </li>
-            <% end%>
-        </ul> 
-        <% end %>
-        <br>
-
-        <%= contact_form.label :email %>
-        <%= contact_form.text_field :email %>
-
-    <% if @contact.errors[:email].present?%>
-        <ul class = 'error-list'>
-            <%@contact.errors[:email].each do | error_message| %>
-                <li> <%= error_message%> </li>
-            <% end%>
-        </ul> 
-        <% end %>
-        <br>
-
-        <%= contact_form.label :age %>
-        <%= contact_form.text_field :age  %>
-
-        <% if @contact.errors[:age].present?%>
-        <ul class = 'error-list'>
-            <%@contact.errors[:age].each do | error_message| %>
-                <li> <%= error_message%> </li>
-            <% end%>
-        </ul> 
-        <% end %>
-        <br>
-
-        <%= contact_form.submit%>
-
-    <% end  %>
-
-    <% else %>
-
-
-    <%= form_with model: @contact do |contact_form| %>
-
-        <%= contact_form.label :name %>
-        <%= contact_form.text_field :name %>
-
-        <% if @contact.errors[:name].present?%>
-        <ul class = 'error-list'>
-            <%@contact.errors[:name].each do | error_message| %>
-                <li> <%= error_message%> </li>
-            <% end%>
-        </ul> 
-        <% end %>
-        <br>
-
-        <%= contact_form.label :email %>
-        <%= contact_form.text_field :email %>
-
-    <% if @contact.errors[:email].present?%>
-        <ul class = 'error-list'>
-            <%@contact.errors[:email].each do | error_message| %>
-                <li> <%= error_message%> </li>
-            <% end%>
-        </ul> 
-        <% end %>
-        <br>
-
-        <%= contact_form.label :age %>
-        <%= contact_form.text_field :age  %>
-
-        <% if @contact.errors[:age].present?%>
-        <ul class = 'error-list'>
-            <%@contact.errors[:age].each do | error_message| %>
-                <li> <%= error_message%> </li>
-            <% end%>
-        </ul> 
-        <% end %>
-        <br>
-
-
-        <%# <buton class="adopt-pet">Adopt pet</button> %>
-        <br>
-        <br>
-        <%= contact_form.fields_for :pets do |pet_form|%>
-        <%= pet_form.label :name %>
-        <%= pet_form.text_field :name %>
-        <br>
-        <%= pet_form.label :animal_id%>
-        <%= pet_form.select :animal_id, @animals%>
-        <%# <h3><%= button_to 'Adopt Pet, contact'</h3> %>
-
-        <%= contact_form.submit%>
-        <% end %>
-        <br>
-
-    <% end  %>
-
-
-<% end%>
